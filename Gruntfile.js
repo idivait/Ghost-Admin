@@ -37,11 +37,11 @@ module.exports = function (grunt) {
 
                     switch (mode) {
                     case 'prod':
-                        return 'npm run build -- --environment=production --silent';
+                        return 'yarn run build -- --environment=production --silent';
                     case 'dev':
-                        return 'npm run build';
+                        return 'yarn run build';
                     case 'watch':
-                        return `npm run start -- --live-reload-base-url=${liveReloadBaseUrl} --live-reload-port=4201`;
+                        return `yarn run start -- --live-reload-base-url=${liveReloadBaseUrl} --live-reload-port=4201`;
                     }
                 }
             },
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             },
 
             test: {
-                command: 'npm test'
+                command: 'yarn test'
             },
 
             options: {
