@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 
                     switch (mode) {
                     case 'prod':
-                        return 'yarn run build -- --environment=production --silent';
+                        return 'yarn run build -- --environment=production';
                     case 'dev':
                         return 'yarn run build';
                     case 'watch':

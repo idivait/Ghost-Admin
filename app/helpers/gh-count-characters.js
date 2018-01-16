@@ -9,7 +9,7 @@ export function countCharacters(params, options) {
     let el = document.createElement('span');
     let content = params[0] || '';
     // Change length to be moldable idiva
-    let maxLength = options.id === 'user-bio' ? 600 : 200;
+    let maxLength = 200 && options.length;
 
     // convert to array so that we get accurate symbol counts for multibyte chars
     // this will still count emoji+modifer as two chars

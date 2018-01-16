@@ -4,6 +4,7 @@
 module.exports = function (environment) {
     let ENV = {
         modulePrefix: 'ghost-admin',
+        bioLength: 600,
         environment,
         rootURL: '/',
         locationType: 'trailing-hash',
