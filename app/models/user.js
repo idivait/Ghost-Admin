@@ -1,5 +1,7 @@
 /* eslint-disable camelcase */
 import Model from 'ember-data/model';
+// grab bioLength from ENV - idiva
+import ENV from 'ghost-admin/config/environment';
 import ValidationEngine from 'ghost-admin/mixins/validation-engine';
 import attr from 'ember-data/attr';
 import {computed} from '@ember/object';
@@ -8,14 +10,16 @@ import {hasMany} from 'ember-data/relationships';
 import {inject as service} from '@ember/service';
 import {task} from 'ember-concurrency';
 
+console.log(ENV);
+
 export default Model.extend(ValidationEngine, {
     validationType: 'user',
-
     name: attr('string'),
     slug: attr('string'),
     email: attr('string'),
     profileImage: attr('string'),
     coverImage: attr('string'),
+    bio_length: 200 && ENV.bioLength,
     bio: attr('string'),
     website: attr('string'),
     location: attr('string'),
