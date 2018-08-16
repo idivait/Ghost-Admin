@@ -273,8 +273,9 @@
                     }}
                     {{gh-error-message errors=user.errors property="bio" data-test-bio-error=true}}
                     <p>
-                        Write about you, in 200 characters or less.
-                        {{gh-count-characters user.bio}}
+                        {{! change to 600 characters and add in id for count-characters idiva }}
+                        Write about you, in 600 characters or less.
+                        {{gh-count-characters user.bio id="user-bio"}}
                     </p>
                 {{/gh-form-group}}
 
