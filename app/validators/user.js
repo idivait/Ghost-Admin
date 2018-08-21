@@ -28,11 +28,7 @@ export default PasswordValidator.create({
 
         if (this.isActive(model)) {
             // Change length to 600. idiva
-<<<<<<< HEAD
             if (!validator.isLength(bio || '', 0, 600)) {
-=======
-            if (!validator.isLength(bio, 0, 600)) {
->>>>>>> Mod admin client to allow 600 length.
                 model.get('errors').add('bio', 'Bio is too long');
                 this.invalidate();
             }
